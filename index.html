@@ -1,20 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <title>Rest Countries Api</title>
+    <script src="https://kit.fontawesome.com/edb225efbd.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <form id="form">
-        <input type="text" name="country" id="input">
-        <button type="submit" class="search">Search</button>
-    </form>
-    <div class="names">
-        
+
+    <header class="nav">
+        <div class="nav__wrapper">
+            <div class="nav__text">
+                <h4>Where in the World?</h4>
+            </div>
+
+            <div>
+                <button class="nav__button" id="theme__switcher">
+                    <i class="far fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+    <div class="container">
+        <section class="header">
+            <div class="header__left">
+                <input type="text" name="country" id="input" placeholder="Search for a Country...">
+            </div>
+
+            <div class="header__right">
+                <select name="region" id="region">
+                    <option value="all" selected>Filter by Region</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">America</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+            </div>
+
+
+        </section>
+        <div class="countries">
+        </div>
+
+        <div class="modal">
+            <button class="back"><i class="fas fa-arrow-left"></i> Back</button>
+            <div class="modal__wrapper">
+                <div class="modal__image_wrapper">
+                    <img src="" class="modal__image" alt="">
+                </div>
+
+                <div class="modal__content">
+                    <h1 id="title"></h1>
+                    <div class="modal__row">
+                        <div>
+                            <p><strong>Native Name:</strong> <span id="native_name"></span></p>
+                            <p><strong>Population:</strong> <span id="population"></span></p>
+                            <p><strong>Sub Region:</strong> <span id="sub_region"></span></p>
+                            <p><strong>Capital:</strong> <span id="capital"></span></p>
+                        </div>
+
+
+                        <div>
+                            <p><strong>Top Level Domain:</strong> <span id="top_level_domain"></span></p>
+                            <p><strong>Currencies:</strong> <span id="currencies"></span></p>
+                            <p<strong>Languages:</strong> <span id="languages"></span></p>
+                        </div>
+
+                    </div>
+                    <div>
+                        Borders:
+                        <div class="border__names">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <script src="index.js"></script>
 </body>
+
 </html>
