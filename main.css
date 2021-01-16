@@ -302,6 +302,14 @@ input::placeholder {
     .header__right {
         text-align: left;
     }
+    .modal__image_wrapper {
+        margin-top: 350px;
+        margin-bottom: 2rem;
+    }
+
+    .nav__text {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 900px) {
@@ -319,9 +327,3 @@ input::placeholder {
     }
 }
 
-@media (max-width: 500px) {
-    .modal__image_wrapper {
-        margin-top: 350px;
-        margin-bottom: 2rem;
-    }
-}

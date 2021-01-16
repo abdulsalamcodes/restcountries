@@ -130,7 +130,7 @@ fetch(api)
         // Filter Based on Input
         input.addEventListener("input", (e) => {
             var newData = data.filter(item => {
-                return (item.name.toLowerCase().includes(e.target.value)) ? item : null
+                return (item.name.toLowerCase().includes(e.target.value.toLowerCase())) ? item : null
             })
             countries.innerHTML = "";
             populateData(newData)
@@ -139,8 +139,7 @@ fetch(api)
 
         // Filter based on selected Option.
         select_region.addEventListener("change", e => {
-            console.log(e.target.value)
-            if (e.target.value == "all") {
+            if (e.target.value.toLowerCase() == "all") {
                 console.log("hey")
                 populateData(data);
                 return;
