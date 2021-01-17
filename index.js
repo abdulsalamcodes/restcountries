@@ -21,6 +21,7 @@ back.addEventListener("click", () => {
 
 // Handle Country listing
 const populateData = (data) => {
+
     data.map(item => {
         // Reusable Component
         let title = (text) => document.createElement("strong").textContent = text
@@ -112,19 +113,21 @@ const handleBorderModal = (code) => {
 let ThemeSwitcher = document.querySelector("#theme__switcher");
 
 ThemeSwitcher.addEventListener("click", () => {
-    if (document.documentElement.getAttribute('data-theme') !== "dark") {
-        document.documentElement.setAttribute('data-theme', "dark");
-    } else {
+    if (document.documentElement.getAttribute('data-theme') == "dark") {
         document.documentElement.setAttribute('data-theme', "light");
+    } else {
+        document.documentElement.setAttribute('data-theme', "dark");
     }
 })
 
+// countries.innerHTML  = "loading....";
 fetch(api)
     .then(response => {
         return response.json();
     })
     .then(data => {
         // Initialize
+        countries.innerHTML = "";
         populateData(data);
 
         // Filter Based on Input
